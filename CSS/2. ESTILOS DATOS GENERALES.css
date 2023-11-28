@@ -1,0 +1,279 @@
+/*-----------ESTILOS DE DATOS GENERALES-----------*/
+
+/* ESTILOS GLOBALES */
+body {
+    background-color: #50bdfc;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+/*===================================================*/
+/* ESTILOS DEL BOTÓN */
+.button1 {
+    background-color: #058DF6;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+    background-color: #024ec0;
+}
+
+.button1 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+.button2 {
+    background-color: #50bdfc;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button2:hover {
+    background-color: #058DF6;
+}
+
+.button2 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+.button3 {
+    background-color: #032EA3;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button3:hover {
+    background-color: #27b403;
+}
+
+.button3 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+/*
+.button4 {
+    background-color: #032EA3;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button4:hover {
+    background-color: rgb(124, 3, 180);
+}
+
+.button4 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto 
+}
+
+.button5 {
+    background-color: #032EA3;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button5:hover {
+    background-color: rgb(2, 255, 171);
+}
+
+.button5 i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto 
+}*/
+
+.button_ejemplo {
+    background-color: #032EA3;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button_ejemplo:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.button_ejemplo i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+/*===================================================*/
+/* ESTILOS DEL CONTENEDOR DEL BOTÓN */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*================================================*/
+/* ESTILOS DEL CONTENEDOR */
+.container {
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    width: 90%;
+}
+
+/*===================================================*/
+/* ESTILOS DE ENCABEZADOS */
+header {
+    background: #058DF6;
+    border-bottom: #032EA3 10px solid;
+    color: #ffffff;
+    min-height: 70px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+header h1 {
+    padding: 10px 0;
+}
+
+/*================================================*/
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+main {
+    background-color: #058DF6;
+    color: #ffffff;
+    padding: 90px 10;
+}
+
+/*================================================*/
+/* ESTILOS PARA PANTALLAS MAYORES A 768PX */
+@media screen and (min-width : 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width : 768px) {
+    .title1 {
+        width: 900px;
+    }
+}
+
+/*================================================*/
+/* ESTILOS DE LAS IMÁGENES RESPONSIVAS */
+.responsive-image {
+    text-align: center;
+}
+
+.responsive-image img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*================================================*/
+/* ESTILOS DE LA TABLA 1 */
+.table {
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*================================================*/
+/* ESTILOS DE LA TABLA 2 */
+.table2 {
+    background: transparent;
+    color: #000000;
+    font: 20px solid "arial narrow";
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+table2 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*================================================*/
+/* ESTILOS DE LAS CELDAS DE LA TABLA */
+td,
+th {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-image: initial;
+    padding: 20px;
+}
+
+/*================================================*/
+/* ESTILOS DE LOS TÍTULOS */
+.title1 {
+    background-color: #058DF6;
+    color: #ffffff;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    width: 90%;
+}
+
+.title2 {
+    background-color: #36789E;
+    text-align: center;
+}

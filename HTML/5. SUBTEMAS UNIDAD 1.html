@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/5. ESTILOS-SUBTEMAS-UNIDAD-I.css">
+    <title>SUBTEMAS UNIDAD 1</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>LENGUAJES & AUTÓMATAS II</h1>
+        </div>
+    </header>
+    <br>
+    <main class="container">
+        <main class="title1">
+            <h2>SUBTEMAS UNIDAD I.</h2>
+        </main>
+        <main class="title2">
+            <h2><strong>1.1<br>"ÁRBOLES DE EXPRESIONES" </strong></h2>
+        </main>
+        <p>
+        <ul>
+            <li>
+                Es una estructura jerárquica en la cual se registran las
+                operaciones que realiza el programa fuente.
+            </li>
+            <br>
+            <li>
+                En cada una de las ramas del árbol se registra el valor o significado
+                que este debe tener y el análisis se encarga de terminar cuál de los
+                valores registrado en la rama es aplicable.
+            </li>
+            <br>
+            <li>
+                Los árboles de expresiones representan el código de nivel del
+                lenguaje en forma de datos. Los datos se almacenan en una estructura con forma de árbol.
+                operaciones que realiza el programa fuente.
+            </li>
+            <br>
+            <li>
+                Es una estructura jerárquica en la cual se registran las
+                operaciones que realiza el programa fuente.
+            </li>
+        </ul>
+        <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/13. SUBTEMAS U1 - EJEMPLO 1 ARBOLES DE EXPRESIÓN.png"
+                alt="13. SUBTEMAS U1 - EJEMPLO 1 ARBOLES DE EXPRESIÓN.png" width="650" height="350">
+        </div>
+        <br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/14. SUBTEMAS U1 - EJEMPLO 2 ARBOLES DE EXPRESION.png"
+                alt="14. SUBTEMAS U1 - EJEMPLO 2 ARBOLES DE EXPRESION.png" width="650" height="350">
+        </div>
+        <br>
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 id="subtema2" class="title2"><strong>
+                <id>1.2<br>"ACCIONES SEMÁNTICAS DE UN ANALIZADOR SINTÁCTICO"
+            </strong></h2>
+        <p>
+            Se encargan de que los tipos que intervienen en las expresiones sean
+            compatibles o que los parámetros reales de una función sean coherentes
+            con los parámetros formales.
+            <br></br>
+            <strong>¿Qué hace un análisis semántico?</strong>
+            <br>
+            El análisis semántico, es un método de procesamiento del lenguaje natural, 
+            consiste en examinar el significado de las palabras y frases para comprender
+            el propósito de una oración o párrafo.
+            <br></br>
+            <strong>¿Cómo funciona un analizador sintáctico?</strong>
+            <br>
+            Su principal función es analizar la secuencia de componentes léxicos de la
+            entrada para verificar que cumplen con las reglas gramaticales especificadas.
+            Esta interacción se aplica bajo un esquema donde el analizador léxico es una
+            subrutina o corutina del analizador sintáctico.
+            <br></br>
+            <strong>¿Qué es la tabla de símbolos en lenguajes y autómatas?</strong>
+            <br>
+            La tabla de símbolos (TS) es la estructura utilizada por el compilador para
+            almacenar los atributos asociados a los símbolos que se utilizan en un lenguaje
+            de programación. Los atributos que esta estructura almacena para cada símbolo
+            puede ser: Tipo: entero, real, char, boolean.
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>1.3<br>"COMPROBACIONES DE TIPOS EN EXPRESIONES" </strong></h2>
+        <p>
+            La labor de comprobación de tipos consiste en conferir a las construcciones
+            sintácticas del lenguaje, la semántica de tipificación y en realizar todo tipo
+            de comprobaciones de dicha índole. Por su naturaleza, sin embargo, ésta se
+            encuentra repartida entre la fase de análisis semántico y la generación de
+            código intermedio.
+            <br></br>
+        <ul>
+            <li>
+                <strong>Comprobaciones estáticas</strong>
+            </li>
+            Las comprobaciones estáticas recogen el compendio de todas aquellas tareas de
+            carácter semántico que, por su naturaleza, pueden ser realizadas directamente
+            durante la fase de compilación mediante el uso de artefactos y mecanismos
+            propios de dicha fase. Este tipo de comprobaciones son beneficiosas puesto que
+            confieren seguridad a la ejecución del programa.
+            <br></br>
+            <ol>
+                <li>
+                    Verificar que los tipos y valores asociados a los objetos de un programa
+                    se utilizan de acuerdo con la especificación del lenguaje.
+                </li>
+                <br>
+                <li>
+                    Detectar conversiones implícitas de tipos para efectuarlas o insertar el
+                    código apropiado para efectuarlas
+                </li>
+                <br>
+                <li>
+                    Almacenar información relativa a los tipos de los objetos
+                </li>
+            </ol>
+        </ul>
+        </p>
+        <br>
+
+        <center>
+            <h2><strong>"APLICAR LAS REGLAS DE VERIFICACIÓN DE TIPOS <br> ¿CÓMO Y CUÁNDO APLICARLAS?"</strong></h2>
+        </center>
+        <p>
+        <ul>
+            <li>
+                <strong>Equivalencia:</strong>
+            </li>
+            Determina cuándo dos objetos pueden considerarse del mismo tipo.
+            <br></br>
+            <li>
+                <strong>Compatibilidad:</strong>
+            </li>
+            Determina cuándo un objeto de cierto tipo puede ser usado en un cierto
+            contexto.
+            <br></br>
+            <li>
+                <strong>Inferencia:</strong>
+            </li>
+            Derivación del tipo de un objeto a partir de sus componentes.
+            <br></br>
+            <li>
+                <strong>Conversión:</strong>
+            </li>
+            Permitir y efectuar un cambio de tipo.
+            <br></br>
+            <li>
+                <strong>Coerción:</strong>
+            </li>
+            conversión automática de un tipo a otro.
+            <br></br>
+        </ul>
+        <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/15. SUBTEMAS U1 - EJEMPLO 1 ACCIONES SEMÁNTICAS DE UN ANALIZADOR SINTÁCTICO.png"
+                alt="15. SUBTEMAS U1 - EJEMPLO 1 ACCIONES SEMÁNTICAS DE UN ANALIZADOR SINTÁCTICO.png" width="650"
+                height="350">
+        </div>
+        <br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/16. EJEMPLO TABLA DE SÍMBOLOS - ACCIONES SEMÁNTICAS DE UN ANALIZADOR SINTÁCTICO.png"
+                alt="16. EJEMPLO TABLA DE SÍMBOLOS - ACCIONES SEMÁNTICAS DE UN ANALIZADOR SINTÁCTICO.png" width="650"
+                height="350">
+        </div>
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>1.4<br>"PILA SEMÁNTICA EN UN ANALIZADOR SINTÁCTICO" </strong></h2>
+        <p>
+            <strong>PILA</strong>
+            <br>
+            Estructura de datos que se usa en programación para simplificar ciertas operaciones.
+            <br></br>
+            <strong>ARRAYS * Listas Enlazadas *</strong>
+            <br>
+            Una colección de datos a los que se puede acceder mediante un extremo, que se conoce generalmente como tope.
+            <br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/17. EJEMPLO 1 PILA SEMÁNTICA EN UN ANALIZADOR SINTÁCTICO.png"
+                alt="17. EJEMPLO 1 PILA SEMÁNTICA EN UN ANALIZADOR SINTÁCTICO.png" width="650" height="350">
+        </div>
+        <br>
+        <ul>
+            <li>
+                El análisis semántico usa como entrada el árbol sintáctico para comprobar
+                restricciones de tipo y otras limitaciones semánticas y preparar la
+                generación de código.
+            </li>
+        </ul>
+        </p>
+
+        <center>
+            <h2><strong>"¿PARA QUE SE USA LA PILA?"</strong></h2>
+        </center>
+        <p>
+        <ul>
+            <li>
+                Para contener la información semántica asociada a los operandos
+                (y operadores) en forma de registros semánticos tomando en cuenta las reglas
+                semánticas.
+            </li>
+            <br>
+            <li>
+                (Conj. de normas y especificaciones que definen al lenguaje).
+                Conversiones implícitas
+            </li>
+            <br>
+        </ul>
+        </p>
+
+        <center>
+            <h2><strong>"¿COMO DIBUJAR UN ÁRBOL SINTÁCTICO?"</strong></h2>
+        </center>
+        <p>
+            Un árbol no es otra cosa que una forma de visualizar la estructura
+            de una oración.
+            Es una notación puramente formal, sin sustancia alguna.
+            Precisamente por eso, queremos que sea lo más claro y representativo
+            posible.
+            Queremos que muestre todas las relaciones relevantes en la oración
+            sin confusión.
+        <ul>
+            <li>
+                Primero, hay que asegurarse de que las palabras están en sucesión
+                lineal de izquierda a derecha, y en el mismo orden en que aparecen
+                en la oración.
+                <br>
+                Hay que evitar escribir una palabra encima de la otra.
+                Además, conviene subrayar las palabras, para que contrasten
+                claramente con los nudos categoriales del árbol.
+            </li>
+            <br>
+            <li>
+                La idea es que debemos poder leer la oración de izquierda a derecha
+                sin tener que volver los ojos hacia la izquierda en ningún punto.
+            </li>
+            <br>
+            </p>
+            <center>
+                <h2><strong>"EJEMPLO #1 DE COMO DIBUJAR UN ÁRBOL SINTÁCTICO"</strong></h2>
+            </center>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/18. EJEMPLO 2 PILA SEMÁNTICA EN UN ANALIZADOR SINTÁCTICO.png"
+                    alt="18. EJEMPLO 2 PILA SEMÁNTICA EN UN ANALIZADOR SINTÁCTICO.png" width="650" height="350">
+            </div>
+        </ul>
+        <center>
+            <h2><strong>"EJEMPLO #2 DE COMO DIBUJAR UN ÁRBOL SINTÁCTICO"</strong></h2>
+        </center>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/19. EJEMPLO COMO DIBUJAR UN ARBOL SINTÁCTICO.png"
+                alt="19. EJEMPLO COMO DIBUJAR UN ARBOL SINTÁCTICO.png" width="650" height="350">
+        </div>
+
+        <center>
+            <h2><strong>"1.4 PILA SEMANTICA EN UN ANALIZADOR SINTÁCTICO"</strong></h2>
+        </center>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/20. EJEMPLO PILA SEMANTICA EN UN ANALIZADOR SINTÁCTICO.png"
+                alt="20. EJEMPLO PILA SEMANTICA EN UN ANALIZADOR SINTÁCTICO.png" width="650" height="350">
+        </div>
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>1.5<br>"ESQUEMA DE TRADUCCIÓN" </strong></h2>
+        <p>
+            Un esquema de traducción es una gramática independiente de contexto en la que se asocian
+            atributos con los símbolos gramaticales y se insertan acciones semánticas encerradas entre
+            llaves <strong>{ }</strong> dentro de los lados derechos de las producciones.
+            Los esquemas de traducción pueden tener tantos atributos sintetizados como heredados.
+            <br></br>
+            Cuando se diseña un esquema de traducción, se deben respetar algunas limitaciones
+            para asegurarse de que el valor de un atributo esté disponible cuando una acción
+            se refiera a él. Estas limitaciones, motivadas por las definiciones con atributos
+            por la izquierda, garantizan que las acciones no hagan referencia a un atributo que
+            aún no haya sido calculado.
+            <br>
+            El ejemplo más sencillo ocurre cuando sólo se necesitan atributos sintetizados,
+            en este caso, se puede construir el esquema de traducción creando una acción que
+            conste de una asignación para cada regla semántica y colocando esta acción al
+            final del lado derecho de la producción asociada.
+            <br></br>
+            <br></br>
+            <strong>Traducción descendente</strong>
+            <br>
+            <br>
+            Se trabaja con esquema de traducción en lugar de hacerlo con definiciones
+            dirigidas por sintaxis, así que se puede ser explícito en cuanto al orden en
+            que tienen que lugar las acciones y las evaluaciones de los atributos.
+            <br></br>
+            <br></br>
+            <strong>Eliminación de la recursividad izquierda de un esquema de traducción</strong>
+            <br>
+            <br>
+            Como la mayoría de los operadores aritméticos son asociativos por la izquierda, es natural
+            utilizar gramáticas recursivas por la izquierda para las expresiones. La transformación se
+            aplica a esquemas de traducción con atributos sintetizados.
+            <br></br>
+            Para el análisis sintáctico descendente, se supone que una acción se ejecuta en el mismo
+            momento en que se expandiría un símbolo en la misma posición. Un atributo heredado de un
+            símbolo debe ser calculado por una acción que aparezca antes que el símbolo, y un atributo
+            sintetizado del no terminal de la izquierda se debe calcular después de que hayan
+            sido calculados todos los atributos de los que depende.
+            <br></br>
+            Un atributo heredado de un símbolo debe ser calculado por una acción que aparezca antes que
+            el símbolo, y un atributo sintetizado del no terminal de la izquierda se debe calcular después
+            de que hayan sido calculados todos los atributos de los que depende.
+            <br></br>
+            Los fragmentos de código así insertados se denominan acciones semánticas. Dichos fragmentos actúan,
+            calculan y modifican los atributos asociados con los nodos del árbol sintáctico. El orden en que se
+            evalúan los fragmentos es el de un recorrido primero-profundo del árbol de análisis sintáctico.
+            <br></br>
+            Obsérvese que, en general, para poder aplicar un esquema de traducción hay que construir el árbol
+            sintáctico y después aplicar las acciones empotradas en las reglas en el orden de recorrido
+            primero-profundo.
+            <br>
+            Por supuesto, si la gramática es ambigua una frase podría tener dos árboles y
+            la ejecución de las acciones para ellos podría dar lugar a diferentes resultados. Si se quiere
+            evitar la multiplicidad de resultados (interpretaciones semánticas) es necesario precisar de qué
+            árbol sintáctico concreto se está hablando.
+            <br></br>
+            <center>
+                <h2><strong>"EJEMPLO #1 ESQUEMA DE TRADUCCIÓN"</strong></h2>
+            </center>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/21. 1.5 EJEMPLO ESQUEMA DE TRADUCCIÓN.png"
+                alt="21. 1.5 EJEMPLO ESQUEMA DE TRADUCCIÓN.png" width="650" height="350">
+        </div>
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>1.6<br>"GENERACIÓN DE LA TABLA DE SÍMBOLO Y TABLA DE DIRECCIONES" </strong></h2>
+        <p>
+            Las tablas de símbolos (también llamadas tablas de identificadores y tablas de nombres),
+            realizan dos importantes funciones en el proceso de traducción: verificar que la semántica
+            sea correcta y ayudar en la generación apropiada de código. Ambas funciones se realizan
+            insertando o recuperando desde la tabla de símbolos los atributos de las variables usadas en
+            el programa fuente. Estos atributos, tales como: el nombre, tipo, dirección de almacenamiento y
+            dimensión de una variable, usualmente se encuentran explícitamente en las declaraciones o más
+            implícitamente a través del contexto en que aparecen los nombres de variables en el programa.
+            <br></br>
+            Una de las estructuras de datos que se encuentran relacionadas con las fases del proceso de
+            compilación es la tabla de símbolos, la cual tiene como propósito registrar información que se
+            comparte entre varias etapas y que permite administrar los recursos asociados a las entidades que
+            manipulará el programa. La tabla de símbolos tiene típicamente la siguiente estructura:
+            <br></br>
+            Una tabla de símbolos puede conceptualizarse como una serie de renglones, cada uno de los cuales
+            contiene una lista de valores de atributos que son asociados con una variable en particular.
+            Las clases de los atributos que aparecen en una tabla de símbolos dependen en algún grado de la
+            naturaleza del lenguaje de programación para el cual se escribe el compilador.
+            <br></br>
+            Por ejemplo, un lenguaje puede ser sin tipos, y por lo tanto el atributo tipo no necesita aparecer
+            en la tabla. Similarmente, la organización de la tabla de símbolos variará dependiendo de las
+            limitaciones de memoria y tiempo de acceso.
+            <br></br>
+            <center>
+                <h2><strong>"EJEMPLO #1 GENERACIÓN DE LA TABLA DE SÍMBOLO Y TABLA DE DIRECCIONES"</strong></h2>
+            </center>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/22. 1.6 EJEMPLO ESQUEMA DE TRADUCCIÓN.png"
+                alt="22. 1.6 EJEMPLO ESQUEMA DE TRADUCCIÓN.png" width="650" height="350">
+        </div>
+        </p>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>1.7<br>"MANEJO DE ERRORES SEMÁNTICOS" </strong></h2>
+        <p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/23. 1.7  MANEJO DE ERRORES SEMÁNTICOS.png"
+                alt="23. 1.7  MANEJO DE ERRORES SEMÁNTICOS.png" width="650" height="350">
+        </div>
+        <br></br>
+        Es una de las misiones más importantes de un compilador, aunque, al mismo tiempo, es lo que más
+        dificulta su realización. A veces unos errores ocultan otros.
+        <br></br>
+        A veces un error provoca una avalancha de muchos errores que se solucionan con el primero.
+        <br>
+        Es conveniente un buen manejo de errores, y que el compilador detecte todos los errores que tiene
+        el programa y no se pare en el primero que encuentre. Hay, pues, dos criterios a seguir a la hora
+        de manejar errores:
+        <ul>
+            <li>
+                Pararse al detectar el primer error.
+            </li>
+            <br>
+            <li>
+                Detectar todos los errores de una pasada.
+            </li>
+        </ul>
+        <br>
+        El análisis semántico es posterior al sintáctico y mucho más difícil de formalizar que éste.
+        Se trata de determinar el tipo de los resultados intermedios, comprobar que los argumentos que
+        tiene un operador pertenecen al conjunto de los operadores posibles, y si son compatibles entre sí,
+        etc. En definitiva, comprobará que el significado de lo que se va leyendo es válido.
+        <br></br>
+        La salida "teórica" de la fase de análisis semántico sería un árbol semántico. Consiste en un árbol
+        sintáctico en el que cada una de sus ramas ha adquirido el significado que debe tener. En el caso de
+        los operadores polimórficos (un único símbolo con varios significados), el análisis semántico
+        determina cuál es el aplicable.
+        <br></br>
+        </p>
+    </main>
+
+    <div class="button-container">
+        <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+                class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+            EN HISTORIAL</a>
+        <br>
+        <a href="/HTML/1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i
+                class="fas fa-home"></i>
+            REGRESAR AL MENÚ PRINCIPAL</a>
+        <br>
+        <a href="/HTML/4. UNIDAD 1.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+        <a href="/HTML/6. UNIDAD 2.html" class="button1"> SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <br></br>
+
+    <main class="table">
+        <table>
+            <tr>
+                <th>PRESENTADO POR:</th>
+                <td>Sánchez Flores Aleksandra Estefanía</td>
+            </tr>
+        </table>
+        <br></br>
+    </main>
+</body>
+
+</html>

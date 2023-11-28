@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/13. ESTILOS-SUBTEMAS-UNIDAD-IV.css">
+    <title>SUBTEMAS UNIDAD IV</title>
+</head>
+<header>
+    <div class="container">
+        <h1>LENGUAJES & AUTÓMATAS II</h1>
+    </div>
+</header>
+<br>
+<main class="container">
+    <main class="title1">
+        <h3>SUBTEMAS UNIDAD IV.</h3>
+    </main>
+    <h2 class="title2"><strong>4.1<br>"REGISTROS"</strong></h2>
+    <p>
+        <strong>
+            ¿Qué son?
+        </strong>
+        <br></br>
+        Los registros son la memoria principal de la computadora. Existen diversos registros de propósito general y
+        otros de uso exclusivo. Algunos registros de propósito general son utilizados para cierto tipo de funciones.
+        Existen registros acumuladores, puntero de instrucción, de pila, etc.
+        <br>
+        Los registros son espacios físicos dentro del microprocesador con capacidad de 4 bits hasta 64 bits dependiendo
+        del microprocesador que se emplee.
+        <br></br>
+        <strong>
+            ¿Quienes lo utilizan?
+        </strong>
+        <br></br>
+        Antes de nada, para el desarrollo de esta parte hablaremos indistintamente de registros de activación o de
+        marcos de pila. Esto se debe a que en la documentación encontrada sobre el manejo de los registros ebp y esp se
+        hace mención a dicho concepto de marco de pila. Puesto que el lenguaje permite recursividad, los registros de
+        activación se asignan dinámicamente.
+        <br>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/72. QUIENES UTILIZAN REGISTROS.jpg" alt="72. QUIENES UTILIZAN REGISTROS.jpg" width="650"
+            height="350">
+    </div>
+    <br></br>
+    <center><strong>Distribución</strong></center>
+    <br></br>
+    La UCP o CPU tiene 14 registros internos, cada uno de ellos de 16 bits (una palabra). Los bits están enumerados de
+    derecha a izquierda, de tal modo que el bit menos significativo es el bit 0.
+    Los registros se pueden clasificar de la siguiente forma:
+    <br></br>
+    <strong>Registros de datos:</strong>
+    <br></br>
+    AX: Registro acumulador. Es el principal empleado en las operaciones aritméticas.
+    <br>
+    BX: Registro base. Se usa para indicar un desplazamiento.
+    <br>
+    CX: Registro contador. Se usa como contador en los bucles.
+    <br>
+    DX: Registro de datos
+    <br></br>
+    Estos registros son de uso general y también pueden ser utilizados como registros de 8 bits, para utilizarlos como
+    tales es necesario referirse a ellos como por ejemplo: AH y AL, que son los bytes alto (high) y bajo (low) del
+    registro AX. Esta nomenclatura es aplicable también a los registros BX, CX y DX.
+    <br></br>
+    <strong>Registros de segmentos:</strong>
+    <br></br>
+    CS: Registro de segmento de código. Contiene la dirección de las instrucciones del programa.
+    <br>
+    DS: Registro segmento de datos. Contiene la dirección del área de memoria donde se encuentran los datos del
+    programa.
+    <br>
+    SS: Registro segmento de pila. Contiene la dirección del segmento de pila. La pila es un espacio de memoria temporal
+    que se usa para almacenar valores de 16 bits (palabras).
+    <br>
+    ES: Registro segmento extra. Contiene la dirección del segmento extra. Se trata de un segmento de datos adicional
+    que se utiliza para superar la limitación de los 64Kb del segmento de datos y para hacer transferencias de datos
+    entre segmentos.
+    <br></br>
+    <strong>Registros punteros de pila:</strong>
+    <br></br>
+    SP: Puntero de la pila. Contiene la dirección relativa al segmento de la pila.
+    <br>
+    BP: Puntero base. Se utiliza para fijar el puntero de pila y así poder acceder a los elementos de la pila.
+    <br></br>
+    <strong>Registros índices:</strong>
+    <br></br>
+    SI: Índice fuente.
+    <br>
+    DI: Índice destino.
+    <br></br>
+    <strong>Registro de banderas (flags):</strong>
+    <br></br>
+    Cada bandera es un bit y se usa para registrar la información del estado y el control de las operaciones del
+    microprocesador. Hay nueve banderas (los 7 bits restantes no se usan): Banderas de estado: Registro del estado del
+    procesador, normalmente asociado a una comparación o una instrucción aritmética.
+    <br></br>
+    <ul>
+        <li>
+            CF: Bandera de acareo. OF: Bandera de desbordamiento (aritmético).
+        </li>
+        <li>
+            ZF: Bandera de resultado 0 o comparación igual.
+        </li>
+        <li>
+            SF: Bandera de resultado o comparación negativa.
+        </li>
+        <li>
+            PF: Bandera de paridad (número par de bits).
+        </li>
+        <li>
+            AF: Bandera auxiliar. Indica si hay necesidad de ajuste en las operaciones aritméticas con números BCD.
+        </li>
+        <br>
+        <strong>BANDERAS DE CONTROL:</strong>
+        <li>
+            DF: Bandera de dirección. Controla la dirección de las operaciones con cadenas de caracteres incrementando o
+            decremento automáticamente los registros índices (SI y DI).
+        </li>
+        <li>
+            IF: Bandera de interrupciones. Indica si están permitidas o no las interrupciones de los dispositivos
+            externos.
+        </li>
+        <li>
+            TF: Bandera de atrape. Controla la operación de modo paso a paso (usada por el programa DEBUG).
+        </li>
+    </ul>
+    <br>
+    <strong>¿Cuales su aplicación en la generación de códigos?</strong>
+    <br></br>
+    <ol>
+        <li>
+            Usar el registro de y si está en un registro que no tiene otra variable, y además y no está viva ni tiene
+            uso posterior. Si no:
+        </li>
+        <br>
+        <li>
+            Usar un registro vacío si hay. Si no:
+        </li>
+        <br>
+        <li>
+            Usar un registro ocupado si op requiere que x esté en un registro o si x tiene uso
+            <br>
+            Posterior. Actualizar el descriptor de registro. Si no:
+        </li>
+        <br>
+        <li>
+            Usar la posición de memoria de x
+        </li>
+    </ol>
+    </p>
+    <br></br>
+</main>
+
+<main class="container">
+    <h2 class="title2"><strong>4.2<br>"LENGUAJE ENSAMBLADOR" </strong></h2>
+    <p>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/73. LENGUAJE ENSAMBLADOR (1).jpg" alt="73. LENGUAJE ENSAMBLADOR (1).jpg" width="650"
+            height="350">
+    </div>
+    <br></br>
+    <strong>
+        ¿Qué es?
+    </strong>
+    <br></br>
+    El lenguaje Assembly (Urbina, 2011) (a veces mal llamado "Ensamblador" por su traducción literal al español) es
+    un
+    tipo de lenguaje de bajo nivel utilizado para escribir programas informáticos, y constituye la representación
+    más
+    directa del código máquina específico para cada arquitectura de computadora
+    <br></br>
+    <strong>
+        Segunda generación de lenguajes
+    </strong>
+    <br></br>
+    Versión simbólica de los lenguajes máquina (Urbina, 2011) (MOV, ADD).La comunicación en lenguaje de máquina es
+    particular de cada procesador que se usa, y programar en este lenguaje es muy difícil y tedioso, por lo que se
+    empezó a buscar mejores medios de comunicación con ésta. Los lenguajes ensambladores tienen ventajas sobre los
+    lenguajes de máquina.
+    <br></br>
+    Este lenguaje fue usado ampliamente en el pasado para el desarrollo de software, pero actualmente sólo se
+    utiliza
+    encontradas ocasiones, especialmente cuando se requiere la manipulación directa del hardware o se pretenden
+    rendimientos inusuales de los equipos
+    <br></br>
+    <strong>
+        Características:
+    </strong>
+    <br></br>
+    El programa lee un archivo escrito en lenguaje ensamblador y sustituye cada uno de los códigos mnemotécnicos por
+    su
+    equivalente código máquina. Los programas se hacen fácilmente portables de máquina a máquina y el cálculo de
+    bifurcaciones se hace de manera fácil.
+    <br></br>
+    <strong>
+        Clasificación:
+    </strong>
+    <ul>
+        <li>
+            <strong>
+                Ensambladores básicos:
+            </strong>
+            Son de muy bajo nivel, y su tarea consiste básicamente, en ofrecer nombres simbólicos a las distintas
+            instrucciones, parámetros y cosas tales como los modos de direccionamiento
+        </li>
+        <br>
+        <li>
+            <strong>
+                Ensambladores modulares, o macro ensambladores:
+            </strong>
+            Descendientes de los ensambladores básicos, fueron muy populares en las décadas de los 50 y los 60, fueron
+            antes de la generalización de los lenguajes de alto nivel. Un macroinstrucción es el equivalente a una
+            función en un lenguaje de alto nivel.
+        </li>
+    </ul>
+    <br>
+    <strong>
+        Operaciones básicas
+    </strong>
+    <br></br>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/74. LENGUAJE ENSAMBLADOR (2).webp" alt="74. LENGUAJE ENSAMBLADOR (2).webp" width="450"
+            height="200" align="left">(Urbina, 2011) Las operaciones básicas en un lenguaje ensamblador son la suma la
+        resta la multiplicación y la
+        división y Necesitara un poco más de información sobre la arquitectura y SO para el cual programas.
+        <br>
+        Pero la idea básica es:
+        <br>
+        ✔️ Definir que parámetros tendrá la función.
+        <br>
+        ✔️ Hacer el programa, propiamente dicho, en assembler.
+        <br></br>
+        Siguiendo la convención de pasaje de parámetros, manejará registros y posiciones de memoria, devolviendo los
+        resultados en donde deba (una posición de memoria, el registro eax, etc.).
+    </div>
+    </p>
+    <br></br>
+</main>
+
+<main class="container">
+    <h2 class="title2"><strong>4.3<br>"LENGUAJE MÁQUINA" </strong></h2>
+    <p>
+        <br>
+        <center>
+            <article>
+                <img src="/RECURSOS/IMG/75. LENGUAJE MÁQUINA (1).jpg">
+
+                <img src="/RECURSOS/IMG/76. LENGUAJE MÁQUINA (2).png">
+            </article>
+        </center>
+        <br></br>
+        Es el que proporciona poca o ninguna abstracción del microprocesador de un ordenador. El
+        lenguaje máquina solo
+        es entendible por las computadoras. Se basa en una lógica binaria de 0 y 1, generalmente implementada por
+        mecanismos eléctricos. En general el lenguaje maquina es difícil de entender para los humanos por este motivo
+        hacemos uso de lenguajes más parecidos a los lenguajes naturales.
+        <br></br>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/77. LENGUAJE MÁQUINA (3).jpeg" alt="77. LENGUAJE MÁQUINA (3).jpeg" width="300"
+            height="200" align="right">
+        Se denomina lenguaje máquina a la serie de datos que la parte física de la computadora o hardware, es capaz de
+        interpretar. El lenguaje máquina fue el primero que empleo el hombre para la programación de las primeras
+        computadoras. Una instrucción en lenguaje máquina puede representarse de la siguiente forma:
+        011011001010010011110110. Esta secuencia es fácilmente ejecutada por la computadora, pero es de difícil
+        interpretación, siendo aún más difícil la interpretación de un programa (conjunto de instrucciones) escrito de
+        esta forma.
+        Esta dificultad hace que los errores sean frecuentes y la corrección de los mismos costosa, cuando no imposible,
+        al igual que la verificación y modificación de los programas.
+    </div>
+    <br></br>
+    <strong>Características:</strong>
+    <br></br>
+    El lenguaje máquina realiza un conjunto de operaciones predeterminadas llamadas micro operaciones. Las micro
+    operaciones sólo realizan operaciones del tipo aritmética (+,- ,*,/), lógicas (AND, OR, NOT) y de control
+    (secuencial, de control y repetitiva). El lenguaje maquina es dependiente del tipo de arquitectura. Así un programa
+    máquina para una arquitectura Intel x86 no sé ejecutara en una arquitectura Power PC de IBM (al menos de manera
+    nativa).
+    <br></br>
+    Algunos microprocesadores implementan mas funcionalidades llamado CISC, pero son más lentos que los RISC ya que
+    estos tienen registros más grandes.
+    <br></br>
+    <br></br>
+    <strong>Ventajas</strong>
+    <br></br>
+    <ul>
+        <li>
+            Mayor adaptación al equipo
+        </li>
+        <li>
+            Máxima velocidaad con mínimo uso de memoria
+        </li>
+    </ul>
+    <br></br>
+    <strong>Desventajas</strong>
+    <br></br>
+    <ul>
+        <li>
+            Imposibilidad de escribir código independiente de la máquina.
+        </li>
+        <li>
+            Mayor dificultad en la programación y en la comprensión de los programas.
+        </li>
+        <li>
+            El programador debe conocer más de un centenar de instrucciones.
+        </li>
+        <li>
+            Es necesario conocer en detalle la arquitectura de la máquina.
+        </li>
+    </ul>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/78. LENGUAJE MÁQUINA (4).jpg" alt="78. LENGUAJE MÁQUINA (4).jpg" width="450"
+            height="250">
+    </div>
+    </p>
+    <br></br>
+</main>
+
+<main class="container">
+    <h2 class="title2"><strong>4.4<br>"ADMINISTRACIÓN DE MEMORIA" </strong></h2>
+    <p>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/79. ADMINISTRACIÓN DE MEMORIA (1).jpeg" alt="79. ADMINISTRACIÓN DE MEMORIA (1).jpeg"
+            width="450" height="250">
+    </div>
+    <br></br>
+    La administración de la memoria es un proceso hoy en día muy importante, de tal modo que su mal o buen uso tiene una
+    acción directa sobre el desempeño de memoria. En general un ensamblador tiene un administrador de memoria más
+    limitado que un compilador; en la mayoría de los lenguajes de programación el uso de punteros no estaba vigilado por
+    lo que se tienen muchos problemas con el uso de memoria. Los lenguajes más recientes controlan el uso de punteros y
+    tienen un programa denominado recolector de basura que se encarga de limpiar la memoria no utilizada mejorando el
+    desempeño.
+    <br></br>
+    <div class="responsive-image">
+        <img src="/RECURSOS/IMG/80. ADMINISTRACIÓN DE MEMORIA (2).webp" alt="80. ADMINISTRACIÓN DE MEMORIA (2).webp"
+            width="300" height="250" align="left">La memoria principal puede ser considerada como un arreglo lineal de
+        localidades de almacenamiento de un byte de tamaño. Cada localidad de almacenamiento tiene asignada una
+        dirección que la identifica
+
+        Se distinguen los siguientes propósitos del sistema de administración de memoria:
+        Protección.
+        Si varios programas comparten la memoria principal, se debería asegurar que el programa no sea capaz de cambiar
+        las ubicaciones no pertenecientica él. Aunque una acción de escritura puede tener efectos más graves que una de
+        lectura, esta última tampoco debería estar permitida, para proporcionar algo de privacidad al programa.
+    </div>
+    <br></br>
+    <strong>
+        Compartimiento.
+    </strong>
+    <br>
+    Este objetivo parece contradecir al anterior, sin embargo a veces es necesario para los usuarios poder compartir y
+    actualizar información (por ejemplo, en una base de datos) y, si se organiza la tarea de entrada a la misma, se
+    puede evitar el tener varias copias de la rutina.
+    <br></br>
+    <strong>
+        Reubicación.
+    </strong>
+    <br>
+    La técnica de multiprogramación requiere que varios programas ocupen la memoria al mismo tiempo. Sin embargo no se
+    sabe con anticipación donde será cargado cada programa por lo que no es práctico usar direccionamiento absoluto de
+    memoria.
+    <br></br>
+    <strong>
+        Organización física.
+    </strong>
+    <br>
+    Debido al costo de una memoria principal rápida, éste se usa en conjunto con una memoria secundaria mucho más lenta
+    (y por consiguiente, barata) a fines de extender su capacidad.
+    <br></br>
+    <strong>
+        Organización lógica.
+    </strong>
+    <br>
+    Aunque la mayor parte de las memorias son organizadas linealmente con un direccionamiento secuencial, esto
+    difícilmente concuerde con el camino seguido por el programa, debido al uso de procedimientos, funciones,
+    subrutinas, arreglos, etc
+    </p>
+    <br></br>
+</main>
+
+<div class="button-container">
+    <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+            class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+        EN HISTORIAL</a>
+    <br>
+    <a href="1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i class="fas fa-home"></i>
+        REGRESAR AL MENÚ PRINCIPAL</a>
+    <br>
+    <a href="12. UNIDAD 4.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+    <a href="14. Y OTROS RECURSOS.html" class="button1"> SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+</div>
+<br></br>
+<main class="table">
+    <table>
+        <tr>
+            <th>PRESENTADO POR:</th>
+            <td>Sánchez Flores Aleksandra Estefanía</td>
+        </tr>
+    </table>
+    <br></br>
+</main>
+
+<body>
+
+</body>
+
+</html>

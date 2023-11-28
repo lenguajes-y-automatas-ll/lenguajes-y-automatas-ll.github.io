@@ -1,0 +1,105 @@
+/*---------------ESTILOS DEL INDEX----------------*/
+
+/* ESTILOS GLOBALES */
+body {
+    align-items: center;
+    background-attachment: fixed;
+    background-image: url(/RECURSOS/IMG/0.\ BACKGROUND\ BOTÓN\ INICIO.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+
+/*================================================*/
+/* ESTILOS DEL BOTÓN CENTRADO */
+.boton-centrado {
+    background-color: #000000;
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 3.2vw;
+    padding: 16px 32px;
+    position: relative;
+    max-width: 100%;
+}
+
+.boton-centrado:hover {
+    background-color: #000000;
+    transform: scale(1);
+}
+
+.boton-centrado::before,
+.boton-centrado:after {
+    animation: glow 10s linear infinite;
+    background: linear-gradient(45deg,
+            #ad0606, #ff00c8, #ff7214, #09ff00, #143fff, #0004ff);
+    background-size: 800%;
+    border-radius: 15px;
+    content: "";
+    filter: blur(10px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.boton-centrado i {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+/*================================================*/
+/* ESTILOS DEL LOGO */
+.escudo-tec {
+    height: auto;
+    margin-right: 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(15%);
+    width: 115px;
+    z-index: 1;
+}
+
+/*================================================*/
+/* ESTILOS DE TITULOS */
+.titlebar {
+    align-items: center;
+    background-color: #058DF6;
+    color: #ffffff;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+    height: 95px;
+    justify-content: center;
+    line-height: 50px;
+    position: fixed;
+    top: 0;
+    width: 900%;
+    z-index: 1;
+}
+
+/*================================================*/
+/* CREACIÓN DEL EFECTO GLOW */
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

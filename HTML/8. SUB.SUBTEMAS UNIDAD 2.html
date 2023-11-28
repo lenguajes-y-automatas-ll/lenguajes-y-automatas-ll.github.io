@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/8. ESTILOS-SUB_SUBTEMAS-UNIDAD-II.css">
+    <title>SUB-SUBTEMAS UNIDAD II</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>LENGUAJES & AUTÓMATAS II</h1>
+        </div>
+    </header>
+    <br>
+    <main class="container">
+        <main class="title1">
+            <h3>SUB-SUBTEMAS UNIDAD II.</h3>
+        </main>
+
+        <h2 class="title2"><strong>2.1.1<br>"PREFIJA"</strong></h2>
+        <p>
+            La notación prefija, también conocida como notación de prefijo, es una forma de notación para la lógica, la
+            aritmética, y el álgebra. Su característica distintiva es que coloca los operadores a la izquierda de sus
+            operandos. Si la paridad (es el número de argumentos necesarios para que dicho operador o función se pueda
+            calcular.) de los operadores es fija, el resultado es una sintaxis que carece de paréntesis u otros signos
+            de agrupación, y todavía puede ser analizada sin ambigüedad.
+            <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/32. PREFIJA.png" alt="32. PREFIJA.png" width="650" height="350">
+        </div>
+        <center>"<strong>EJEMPLO:</strong> NOTACION <strong>PREFIJA</strong>"</center>
+        <br></br>
+        <strong>
+            La expresión o notación prefija nos indica que el operador va antes de los operandos sus características
+            principales son:
+        </strong>
+        <br></br>
+        <ul>
+            <li>
+                Los operandos conservan el mismo orden que la notación infija equivalente.
+            </li>
+            <br>
+            <li>
+                No requiere de paréntesis para indicar el orden de precedencia de operadores ya que él es
+                una operación.
+            </li>
+            <br>
+            <li>
+                Se evalúa de izquierda a derecha hasta que encuentra el primer operador seguido inmediatamente de un par
+                de operandos.
+            </li>
+            <br>
+            <li>
+                Se evalúa la expresión binaria y el resultado se cambia como un nuevo operando. Se repite hasta
+                que nos quede un solo resultado.
+            </li>
+            <br>
+            <li>
+                El orden es operador, primer operando, segundo operando.
+            </li>
+        </ul>
+        <br>
+        <strong>Por ejemplo:</strong>
+        <br></br>
+        La expresión para sumar los números uno y dos, en la notación de prefijo,
+        <br>
+        se escribe: <center><strong><u>"+ 1 2"</u></strong></center>
+        <br>
+        <center>en vez de</center>
+        <br>
+        <center>"1 + 2"</center>.
+        <br>
+        En expresiones más complejas, los operadores todavía preceden sus operandos, pero los operandos pueden
+        ser ellos mismos expresiones no triviales incluyendo sus propios operadores.
+        <br></br>
+        <strong>Por ejemplo:</strong>
+        <br></br>
+        <center>(5 - 6) * 7</center>
+        <br>
+        puede ser escrito en <strong>PREFIJO</strong> como:
+        <br></br>
+        <center><strong>(5 - 6) * 7</strong></center>
+        <br></br>
+        O simplemente:
+        <br></br>
+        <center>* - 5 6 7</center>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.1.2<br>"INFIJA"</strong></h2>
+        <p>
+            La expresión o notación infija es la forma más común que utilizamos para escribir expresiones matemáticas,
+            estas notaciones se refiere a que el operador esta entre los operadores. La notación infija puede estar
+            completamente parentizada o puede basarse en un esquema de precedencia de operadores así como el uso de
+            paréntesis para invalidar los arreglos al expresar el orden de evaluación de una expresión:
+            <br></br>
+            <strong>EJEMPLOS:</strong>
+            <br></br>
+            3*4 = 12
+            <br></br>
+            3*4+ = 14
+            <br></br>
+            3*(4+2) = 18
+            <br></br>
+            La notación infija tiene el problema de que en expresiones con más de un operador existe ambigüedad sobre
+            cuál es el orden de evaluación. Por ejemplo, la expresión 8/4/2 se puede interpretar como (8/4)/2 o bien
+            8/(4/2). Las otras notaciones no sufren este problema.
+            <br></br>
+            La notación habitual. El orden es primer operando, operador, segundo operando.
+            <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/33. INFIJA.png" alt="33. INFIJA.png" width="650" height="350">
+        </div>
+        <center>"<strong>EJEMPLO:</strong> NOTACIÓN <strong>INFIJA</strong>"</center>
+        <br></br>
+        <strong>
+            La expresión o notación infija nos indica que el operador va entre
+            los operandos, sus características principales son:
+        </strong>
+        <ul>
+            <li>
+                En la notación infija, el operador se coloca entre los dos operandos sobre los que está actuando.
+            </li>
+            <br>
+            <li>
+                En la notación infija, a diferencia de las notaciones de prefijo o posfijo, es necesario rodear
+                entre paréntesis a los grupos de operandos y operadores, para indicar el orden en el cual deben
+                ser realizadas las operaciones.
+                <br>
+                En la ausencia de paréntesis, ciertas reglas de prioridad determinan el orden de las operaciones.
+            </li>
+            <br>
+            <li>
+                Cada operador tiene un nivel de precedencia. Los operadores de mayor precedencia se utilizan antes
+                que los operadores de menor precedencia. Lo único que puede cambiar ese orden es la presencia de
+                paréntesis.
+            </li>
+            <br>
+            <li>
+                Si aparecen dos operadores de igual precedencia, se utiliza un ordenamiento o asociatividad de
+                izquierda a derecha.
+            </li>
+            <br>
+            <li>
+                La notación infija puede ser ambigua en ausencia de paréntesis Por ejemplo, en la expresión:
+                <strong>
+                    <center>A + B * C ,</center>
+                </strong>
+                <br>
+                no está claro si se debe sumar A y B primero o multiplicar B y C primero.
+            </li>
+        </ul>
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.1.3<br>"POSTFIJA"</strong></h2>
+        <p>
+            La notación postfija pone el operador al final de los dos operandos, por lo que la
+            expresión queda:
+            <strong>
+                <center>ab+5-</center>
+            </strong>
+            <br>
+            La notación postfija utiliza una estructura del tipo LIFO (ab+5 - <strong>Last First Out</strong>) pila,
+            la cual es la más utilizada para la implementación.
+            Llamada también polaca inversa, se usa para representar expresiones sin necesidad
+            de paréntesis.
+            <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/34. POSTFIJA.png" alt="34. POSTFIJA.png" width="650" height="350">
+        </div>
+        <center>"<strong>EJEMPLO:</strong> NOTACIÓN <strong>POSTFIJA</strong>"</center>
+        <br></br>
+        <strong>
+            Como su nombre lo indica se refiere a que el operador ocupa la posición después de
+            los operandos sus características principales son:
+        </strong>
+        <br></br>
+        <ul>
+            <li>
+                El orden de los operandos se conserva igual que la expresión infija equivalente no utiliza
+                paréntesis ya que no es una operación ambigua.
+            </li>
+            <br>
+            <li>
+                La operación posfija no es exactamente lo inverso a la operación prefija equivalente:
+                <center><strong>(A+B)*C AB+C*</strong></center>
+            </li>
+            <br>
+            <li>
+                El orden es primer operando, segundo operando, operador.
+            </li>
+        </ul>
+        </p>
+    </main>
+
+    <main class="container">
+        <br></br>
+        <strong>Por ejemplo:</strong>
+        <br>
+        Si deseamos representar las expresiones:
+        <center><strong>(2+(3*4))=x</strong></center>
+        <center>y<center>
+                <center><strong>((2+3)*4)=x</strong></center>
+                Esto en las tres notaciones mencionadas, el resultado sería:
+                <br></br>
+                <div class="responsive-table">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <center><strong>(2+(3*4))=x</strong></center>
+                            </td>
+                            <td>
+                                <center><strong>((2+3)*4)=x</strong></center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NOTACIÓN PREFIJA</td>
+                            <td>
+                                <center>=+2*34x</center>
+                            </td>
+                            <td>
+                                <center>=*+234x</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NOTACIÓN INFIJA</td>
+                            <td>
+                                <center>2+3*4=x</center>
+                            </td>
+                            <td>
+                                <center>(2+3)*4=x</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NOTACIÓN POSTFIJA</td>
+                            <td>
+                                <center>234*+x=</center>
+                            </td>
+                            <td>
+                                <center>23+4*x=</center>
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+    </main>
+    <br></br>
+    <br></br>
+    <center><strong> ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭
+            ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ </strong></center>
+    <br></br>
+    <br></br>
+    <main class="container">
+        <h2 class="title2"><strong>2.2.1<br>"NOTACIÓN POLACA"</strong></h2>
+        <p>
+            La notación polaca, también conocida como notación de prefijo o notación prefija, es una forma de notación
+            matemática en la que los operadores preceden a sus operandos. Fue creada por Jan Łukasiewicz en los años 20
+            del siglo XX. Se aplica en lógica, aritmética y álgebra Tiene la ventaja de no necesitar paréntesis u otros
+            signos.
+            <br></br>
+            En el contexto de los lenguajes y autómatas, la notación polaca es originada por un Autómata con pila. Los
+            operadores siempre preceden a los operandos sobre los que actúan, lo que tiene la ventaja de no necesitar
+            paréntesis.
+            <br></br>
+            La ventaja de RPN es que elimina la necesidad de paréntesis para indicar el orden de las operaciones. Esto
+            puede hacer que los cálculos sean más rápidos y fáciles de introducir, además de reducir la posibilidad de
+            errores.
+            <br></br>
+            <strong>EJEMPLO #1:</strong>
+            <br></br>
+            <strong>Notación Estándar:</strong> 2 * (3 + 5)
+            <br>
+            <center>se convierte en</center>
+            <br>
+            <strong>Notación Polaca:</strong> * 2 + 3 5
+            <br></br>
+            ==========================================================================================================
+            <br></br>
+            <strong>EJEMPLO #2:</strong>
+            <br></br>
+            <strong>Notación Estándar:</strong> 2 * 3 + 5
+            <br>
+            <center>se convierte en</center>
+            <br>
+            <strong>Notación Polaca:</strong> +*2 3 5
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.2.2<br>"CÓDIGO P"</strong></h2>
+        <p>
+            El código P comenzó como un código ensamblador objetivo estándar producido por varios compiladores Pascal en
+            la
+            década de 1970 y principios de la de 1980. Fue diseñado para código real para una máquina de pila hipotética
+            la
+            idea era hacer que los compiladores de Pascal se transportaran fácilmente requiriendo solo que se volviera a
+            escribir el intérprete de la maquina P para una plataforma, el código P también ha probado ser útil como
+            código
+            intermedio y sean utilizado varias extensiones y modificaciones del mismo en diversos compiladores de código
+            nativo,
+            la mayor parte para lenguaje tipo Pascal.
+            <br></br>
+            Como el código P fue diseñado para ser directamente ejecutable, contiene una descripción implícita de un
+            ambiente de ejecución particular que incluye tamaños de datos, además de mucha
+            información
+            específica para la maquina P, que debe conocer si se desea que un programa de código P se comprensible. La
+            máquina P
+            está compuesta por una memoria de código, una memoria de datos no específica para variables nombre das y una
+            pila para
+            datos temporales, junto como cualquiera registro que sea necesario para mantener la pila y apoyar la
+            ejecución.
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.2.3<br>"TRIPLOS"</strong></h2>
+        <p>
+            En la historia de los compiladores han sido utilizadas una amplia variedad de representaciones intermedias
+            como
+            lo es la siguiente clase de representación de código intermedio de un árbol de 3 direcciones,2 para los
+            operandos y
+            una para la ubicación del resultado. esta clase incluye un amplio número de representaciones diferentes
+            entre las cuales
+            encontramos cuádruplos y triplos. la principal diferencia entre estas notaciones y la notación postfija es
+            que ellos
+            incluyen referencias explicitas para los resultados de los cálculos intermedios, mientras que la notación
+            posfija los
+            resultados son implícitos al representarlos en una pila.
+            <br></br>
+            La diferencia entre triplos y cuádruplos es que con los triplos es referenciado el valor intermedio hacia el
+            número del
+            triplo que lo creo, pero en los cuádruplos requiere que ellos tengan nombre implícito.
+            <br>
+            Los triplos tienen una ventaja obvia de ser más consistente, pero ellos dependen de su posición, y hacen que
+            la
+            optimización presente cambios de código mucho más compleja. Para evitar tener que introducir nombres
+            temporales en la
+            tabla de símbolos, se hace referencia a un valor temporal según la posición de la proposición que lo
+            calcula. Las propias
+            instrucciones representan el valor del nombre temporal. La implementación se hace mediante registros de solo
+            tres
+            campos (op, arg1, arg2).
+            <br></br>
+            En la notación de tripletes se necesita menor espacio y el compilador no necesita generar los nombres
+            temporales.
+            Sin embargo, en esta notación, trasladar una proposición que defina un valor temporal exige que se
+            modifiquen todas
+            las referencias a esa proposición. Lo cual supone un inconveniente a la hora de optimizar el código, pues a
+            menudo
+            es necesario cambiar proposiciones de lugar.
+            <br>
+            Una forma de solucionar esto consiste en listar las posiciones a las tripletas en lugar de listar las
+            tripletas mismas.
+            De esta manera, un optimizador podría mover una instrucción reordenando la lista, sin tener que mover las
+            tripletas
+            en si.
+            <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/35. SUB-SUBTEMAS U2 - REPRESENTACIONES DE CÓDIGO INTERMEDIO 1 (TRIPLOS).webp"
+                alt="35. SUB-SUBTEMAS U2 - REPRESENTACIONES DE CÓDIGO INTERMEDIO 1 (TRIPLOS).webp" width="650"
+                height="350">
+        </div>
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.2.4<br>"CUÁDRUPLOS"</strong></h2>
+        <p>
+            <center>
+                <strong>Ejemplo:</strong>
+                <br></br>
+                (A+B)*(C+D)-E
+                <br></br>
+                +, A, B, T1
+                <br></br>
+                +, C, D, T2
+                <br></br>
+                *, T1, T2, T3
+                <br></br>
+                -, T3, E, T4
+            </center>
+            <br>
+            Es una estructura tipo registro con cuatros campos que se llaman:
+            <br></br>
+        <div class="responsive-table">
+            <table>
+                <tr>
+                    <td class="celda-encabezado">
+                        <center><strong>Operador</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Arg 1</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Arg 2</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Resultado</strong></center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br></br>
+        Donde operando1, operando2 y resultado pueden ser constantes, identificadores y variables temporales definidos
+        por el compilador mientras que operador representa una operación arbitraria.
+        <br></br>
+        <br>
+        <div class="responsive-table">
+            <table>
+                <tr>
+                    <td class="celda-encabezado">
+                        <center><strong>Operador</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Arg 1</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Arg 2</strong></center>
+                    </td>
+                    <td class="celda-encabezado">
+                        <center><strong>Resultado</strong></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>*</center>
+                    </td>
+                    <td>
+                        <center>C</center>
+                    </td>
+                    <td>
+                        <center>D</center>
+                    </td>
+                    <td>
+                        <center>T1</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>+</center>
+                    </td>
+                    <td>
+                        <center>B</center>
+                    </td>
+                    <td>
+                        <center>T1</center>
+                    </td>
+                    <td>
+                        <center>T2</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>=</center>
+                    </td>
+                    <td>
+                        <center>T2</center>
+                    </td>
+                    <td>
+                        <center></center>
+                    </td>
+                    <td>
+                        <center>A</center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br></br>
+        Los cuádruplos facilitan la aplicación de muchas optimizaciones, pero hay que tener un algoritmo para la
+        reutilización de las variables
+        temporales (reutilización de registros del procesador).
+        </p>
+        <br></br>
+    </main>
+    <br></br>
+    <br></br>
+    <center><strong> ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭
+            ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ ✩ ✭ </strong></center>
+    <br></br>
+    <br></br>
+    <main class="container">
+        <h2 class="title2"><strong>2.3.1<br>"VARIABLES Y CONSTANTES"</strong></h2>
+        <p>
+            <strong>VARIABLES</strong>
+            <br>
+            Es un nombre que se refiere a un objeto que reside en la memoria. El objeto puede ser de alguno de los tipos
+            vistos(número o cadena de texto), o
+            alguno de los otros tipos existentes en Python.
+            Cada variable debe tener un nombre único llamado identificador. Eso es muy de ayuda pensar las variables
+            como contenedores que contienen data el
+            cual puede ser cambiado después a través de técnicas de programación.
+            <br></br>
+            <strong>Alcance de las variables</strong>
+            <br>
+            Las variables en Python son locales por defecto. Esto quiere decir que las variables definidas y utilizadas
+            en el bloque de código de una función, sólo tienen existencia dentro de la misma, y no interfieren con otras
+            variables del resto del código.
+            A su vez, las variables existentes fuera de una función, no son visibles dentro de la misma. En caso de que
+            sea conveniente o necesario, una variable
+            local puede convertirse en una variable global declarándola explícitamente como tal con la sentencia global.
+            <br></br>
+            <strong>EJEMPLOS DE VARIABLES</strong>
+            <br>
+            A continuación, se presentan algunos ejemplos del uso de variables:
+            <br></br>
+        <ol>
+            <strong>
+                <li>
+                    Ejemplo de <u>ASIGNAR</u> valor a variable:
+                </li>
+            </strong>
+            A continuación, se creará un par de variables a modo de ejemplo. Una de tipo cadenas de caracteres y una de
+            tipo entero:
+            <br></br>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/36. EJEMPLOS DE ASIGNAR VARIABLES (PHYTON).png"
+                    alt="36. EJEMPLOS DE ASIGNAR VARIABLES (PHYTON).png" width="650" height="350">
+            </div>
+            <br></br>
+            Como se puede observar en Python, a diferencia de muchos otros lenguajes, no se declara el tipo de la
+            variable al crearla.
+            <br></br>
+            En Java, por ejemplo, definir una variable seria así:
+            <br></br>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/37. EJEMPLOS DE ASIGNAR VARIABLES (JAVA).png"
+                    alt="37. EJEMPLOS DE ASIGNAR VARIABLES (JAVA).png" width="650" height="350">
+            </div>
+            <br></br>
+            También nos ha servido el pequeño ejemplo para presentar los comentarios en linea en Python: cadenas de
+            caracteres que comienzan con el carácter # y que Python
+            ignora totalmente. Hay más tipos de comentarios, de los cuales se tratarán más adelante.
+            <br></br>
+            <br></br>
+            <strong>
+                <li>
+                    Ejemplo de <u>CAMBIAR</u> valor a variable:
+                </li>
+            </strong>
+            A continuación, se cambiará el valor para una variable de tipo cadenas de caracteres a modo de ejemplo:
+            <br></br>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/38. EJEMPLOS DE CAMBIAR VALORES DE VARIABLES.png"
+                    alt="38. EJEMPLOS DE CAMBIAR VALORES DE VARIABLES.png" width="650" height="350">
+            </div>
+            <br></br>
+            <br></br>
+            <strong>
+                <li>
+                    Ejemplo de <u>ASIGNAR MÚLTIPLES VALORES</u> a <u>MÚLTIPLES VARIABLES</u>:
+                </li>
+            </strong>
+            A continuación, se crearán múltiples variables (entero, coma flotante, cadenas de caracteres) asignando
+            múltiples valores:
+            <br></br>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/39. EJEMPLOS DE ASIGNAR MÚLTIPLES VALORES A MÚLTIPLES VARIABLES.png"
+                    alt="39. EJEMPLOS DE ASIGNAR MÚLTIPLES VALORES A MÚLTIPLES VARIABLES.png" width="650" height="350">
+            </div>
+            <br>
+            Si usted quiere asignar el mismo valor a múltiples variables al mismo tiempo, usted puede hacer lo
+            siguiente:
+            <br></br>
+            <div class="responsive-image">
+                <img src="/RECURSOS/IMG/40. EJEMPLOS DE ASIGNAR MÚLTIPLES VALORES A MÚLTIPLES VARIABLES.png"
+                    alt="40. EJEMPLOS DE ASIGNAR MÚLTIPLES VALORES A MÚLTIPLES VARIABLES.png" width="650" height="350">
+            </div>
+            <br>
+            El segundo programa asigna el mismo valor booleano a todas las tres variables x, y, z.
+        </ol>
+        ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+        <br></br>
+        <br></br>
+        <strong>CONSTANTES</strong>
+        <br>
+        Una constante es un tipo de variable la cual no puede ser cambiada. Eso es muy de ayuda pensar las constantes
+        como contenedores que contienen información el cual no puede ser cambiado después.
+        En Python, las constantes son usualmente declaradas y asignadas en un módulo. Aquí, el módulo significa un nuevo
+        archivo que contiene variables, funciones, etc; el cual es importada en el archivo principal.
+        <br></br>
+        Dentro del módulo, las constantes son escritas en letras MAYÚSCULAS y separadas las palabras con el carácter
+        underscore _.
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.3.2<br>"EXPRESIONES"</strong></h2>
+        <p>
+            En programación, una expresión es una combinación de constantes, variables o funciones, que es interpretada
+            de acuerdo a las normas particulares de precedencia y asociación para un lenguaje de programación en
+            particular. Como en matemáticas, la expresión es su valor evaluado, es decir, la expresión es una
+            representación de ese valor.
+            <br></br>
+            <br></br>
+            <strong>EJEMPLO DE EXPRESIONES</strong>
+        <ul>
+            <li>
+                EXPRESIÓN <strong>RELACIONAL</strong>: <center><i>y</i> > 8</center>
+            </li>
+            <br></br>
+            <li>
+                EXPRESIÓN <strong>ARITMÉTICA</strong>:
+                <center>3+2,</center>
+                <br>
+                <center><i>x</i>+1,</center>
+                <br>
+                <center>...</center>
+            </li>
+            <br></br>
+            <li>
+                EXPRESIÓN <strong>LÓGICA</strong>:
+                <center><i>x</i> OR <i>y</i>,</center>
+                <br>
+                <center>NOT <i>x</i>,</center>
+                <br>
+                <center>...</center>
+            </li>
+            <br></br>
+            <li>
+                EXPRESIÓN <strong>CON PREDICADOS</strong>:
+                <center><i>P (a)</i> AND <i>Q(b)</i>,</center>
+                <br>
+                <center>...</center>
+            </li>
+        </ul>
+        Una fórmula es una secuencia o cadena de caracteres cuyos símbolos pertenecen a un lenguaje formal, de tal
+        manera que la expresión cumple ciertas reglas de buena formación y que admite una interpretación consistente en
+        alguna área de la matemática y en otros sistemas formales.
+        <br>
+        Ésta tiene la finalidad de expresar una relación general entre los términos expresados en la fórmula.
+        <br></br>
+        En un sistema formal, una fórmula bien formada es una cadena de caracteres o palabra generada según una
+        gramática formal a partir de un alfabeto dado. Un lenguaje formal se define como el conjunto de todas sus
+        fórmulas bien formadas.
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.3.3<br>"INSTRUCCIÓN DE ASIGNACIÓN"</strong></h2>
+        <p>
+            La “Instrucción de Asignación” es un tema importante en el curso de Autómatas II. En el contexto de la
+            programación y los lenguajes de programación, una instrucción de asignación es una operación que toma el
+            valor de la derecha del operador de asignación (=) y lo almacena en el elemento de la izquierda.
+            <br></br>
+            Por ejemplo, en el código <strong>x = 5</strong>, <strong><i>x</i></strong> es el elemento de la izquierda y
+            <strong><i>5</i></strong> es el valor de la derecha del operador de asignación(=). Después de ejecutar esta
+            instrucción, <strong><i>x</i></strong> tendrá el valor <strong><i>5</i></strong>.
+            <br></br>
+            En el análisis semántico de un compilador, la instrucción de asignación juega un papel crucial. Es durante
+            este proceso que se genera el código objeto, se optimiza y se desarrolla el análisis semántico.
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.3.4<br>"INSTRUCCIONES DE CONTROL"</strong></h2>
+        <p>
+            Esta forma de programación sólo permite resolver problemas sencillos. Para resolver problemas más complejos,
+            nos puede interesar que dependiendo de los valores de los datos, se ejecuten unas instrucciones u otras.
+            <br></br>
+            Las instrucciones condicionales nos van a permitir representar éste tipo de comportamiento. Sentencias IF y
+            SWITCH. En otros casos, nos encontraremos con la necesidad de repetir una instrucción o instrucciones un
+            número determinado de veces. En éstos casos utilizaremos instrucciones de control iterativas o repetitivas
+            (ciclos). Sentencias WHILE, DO-WHILE y FOR.
+            <br></br>
+            Las instrucciones de control son aquellas que nos permiten variar o alterar la secuencia normal de ejecución
+            de un programa. Prácticamente la totalidad de lenguajes de programación de alto nivel soportan tres tipos de
+            instrucciones de control:
+        <ul>
+            <li>
+                Instrucciones condicionales o alternativas
+            </li>
+            <br>
+            <li>
+                Instrucciones de salto
+            </li>
+            <br>
+            <li>
+                Instrucciones repetitivas
+            </li>
+            <br>
+        </ul>
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.3.5<br>"FUNCIONES"</strong></h2>
+        <p>
+            Entendemos que es el uso de la lengua que hace un hablante. En simples palabras, las funciones del lenguaje
+            son los diferentes objetivos, propósitos y servicio que se le da al lenguaje al comunicarse, dándose una
+            función del lenguaje por cada factor que tiene éste, en donde la función que prevalece es el factor en donde
+            más se pone énfasis al comunicarse. Diversos lingüistas (Karl Bühler, Roman Jakobson, Michael Halliday ) han
+            propuesto distintas clasificaciones de las funciones del lenguaje: Bühler propuso que existían únicamente
+            tres funciones: La Representativa (por la cual se trasmiten informaciones objetivamente).
+            <br></br>
+            La Expresiva o emotiva (que expresa sentimientos del emisor) La Conativa, mediante la que se influye en el
+            receptor del mensaje a través de órdenes, mandatos o sugerencias ESTRUCTURAS El código intermedio no es el
+            lenguaje de programación de ninguna máquina real, sino que corresponde a una máquina abstracta, que se debe
+            de definir lo más general posible, de forma que sea posible traducir este código intermedio a cualquier
+            máquina real.
+            <br></br>
+            El objetivo del código intermedio es reducir el número de programas necesarios para construir traductores, y
+            permitir más fácilmente la transportabilidad de unas máquinas a otras. Supóngase que se tienen n lenguajes,
+            y se desea construir traductores entre ellos. Sería necesario construir n*(n-) traductores. Sin embargo si
+            se construye un lenguaje intermedio, tan sólo son necesarios 2*n traductores. Así por ejemplo un fabricante
+            de compiladores puede construir un compilador para diferentes máquinas objeto con tan sólo cambiar las dos
+            últimas fases de la tarea de síntesis.
+            <br></br>
+        <ul>
+            <li>
+                Las funciones pueden reducir a en línea, lo que se hace que expandir el código original de la función.
+            </li>
+            <li>
+                Las funciones se descomponen simplificando los parámetros de manera individual al igual que el valor de
+                retorno.
+            </li>
+        </ul>
+        </p>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>2.3.6<br>"ESTRUCTURAS"</strong></h2>
+        <p>
+            Las Estructuras de Control se emplean para controlar la ejecución y flujo del código, las cuales se dividen
+            en:
+            <br>
+        <ul>
+            <li>
+                <strong>Estructuras de Selección:</strong> Son aquellas que se utilizan para realizar operaciones
+                basadas en el valor de una expresión
+            </li>
+            <li>
+                <strong>Estructuras de Iteración:</strong> Son aquellas que nos permiten ejecutar un bloque de código
+                repetidamente mientras una condicíon específica sea verdadera.
+            </li>
+        </ul>
+        </p>
+        <br></br>
+    </main>
+
+    <div class="button-container">
+        <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+                class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+            EN HISTORIAL</a>
+        <br>
+        <a href="/HTML/1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i class="fas fa-home"></i>
+            REGRESAR AL MENÚ PRINCIPAL</a>
+        <br>
+        <a href="/HTML/7. SUBTEMAS UNIDAD 2.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+        <a href="/HTML/9. UNIDAD 3.html" class="button1"> SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <br></br>
+    <main class="table">
+        <table>
+            <tr>
+                <th>PRESENTADO POR:</th>
+                <td>Sánchez Flores Aleksandra Estefanía</td>
+            </tr>
+        </table>
+        <br></br>
+    </main>
+</body>
+
+</html>

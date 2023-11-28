@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/10. ESTILOS-SUBTEMAS-UNIDAD-III.css">
+    <title>SUBTEMAS UNIDAD III</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>LENGUAJES & AUTÓMATAS II</h1>
+        </div>
+    </header>
+    <br>
+    <main class="container">
+        <main class="title1">
+            <h3>SUBTEMAS UNIDAD III.</h3>
+        </main>
+        <h2 class="title2"><strong>3.1<br>"TIPOS DE OPTIMIZACIÓN"</strong></h2>
+        <p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/45. TIPOS DE OPTIMIZACIÓN.png" alt="45. TIPOS DE OPTIMIZACIÓN.jpg" width="650" height="350">
+        </div>
+        <ul>
+            <li>
+                <strong>LOCALES:</strong>
+                <br>
+                La optimización local se realiza sobre módulos del programa. En la mayoría de las
+                ocasiones a través de funciones, métodos, procedimientos, clases, etc.
+                La característica de las optimizaciones locales es que solo se ven reflejados
+                en dichas secciones. La optimización local sirve cuando un bloque de programa o
+                sección es crítico por ejemplo: E/S, la concurrencia, la rapidez y confiabilidad
+                de un conjunto de instrucciones.
+                <br></br>
+                Como el espacio de soluciones es más pequeño la
+                optimización local es más rápida. Como el espacio de soluciones es más pequeño la
+                optimización local es más rápida.
+                <br></br>
+                <center>****************************************************************<center>
+                        <br></br>
+                        <center><strong>EJEMPLO #1</strong></center>
+                        <br>
+                        <strong>Ejecución en tiempo de compilación</strong>
+                        <br>
+                        <center>
+                            Precalcular expresiones constantes (con constantes o variables cuyo valor no cambia).
+                            <br></br>
+                            3 ! i = 5
+                            <br></br>
+                            j = 4
+                            <br></br>
+                            f = j + 2.5
+                            <br></br>
+                            !
+                            <br></br>
+                            j = 4
+                            <br></br>
+                            f = 6.5
+                        </center>
+                        <br></br>
+                        <center>****************************************************************<center>
+                                <br></br>
+                                <center><strong>EJEMPLO #2</strong></center>
+                                <br>
+                                <strong>Reutilización de expresiones comunes</strong>
+                                <br>
+                                <center>
+                                    a = b + c
+                                    <br></br>
+                                    d = a - d
+                                    <br></br>
+                                    e = b + c
+                                    <br></br>
+                                    f = a - d
+                                    <br></br>
+                                    !
+                                    <br></br>
+                                    a = b + c
+                                    <br></br>
+                                    d = a - d
+                                    <br></br>
+                                    e = a
+                                    <br></br>
+                                    f = a – d
+                                </center>
+                                <br></br>
+                                <center>****************************************************************<center>
+                                        <br></br>
+                                        <center><strong>EJEMPLO #3</strong></center>
+                                        <br>
+                                        <strong>Propagación de copias</strong>
+                                        <br>
+                                        <center>
+                                            Ante instrucciones f=a, sustituir todos los usos de f por a.
+                                            <br></br>
+                                            a = 3 + i
+                                            <br></br>
+                                            f = a
+                                            <br></br>
+                                            b = f + c
+                                            <br></br>
+                                            d = a + m
+                                            <br></br>
+                                            m = f + d
+                                            <br></br>
+                                            !
+                                            <br></br>
+                                            a = 3 + i
+                                            <br></br>
+                                            b = a + c
+                                            <br></br>
+                                            d = a + m
+                                            <br></br>
+                                            m = a + d
+                                        </center>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <strong>CICLOS:</strong>
+                <br>
+                Los ciclos son una de las partes más esenciales en el rendimiento de un programa
+                dado que realizan acciones repetitivas, y si dichas acciones están mal realizadas, el
+                problema se hace N veces más grandes. La mayoría de las optimizaciones sobre ciclos
+                tratan de encontrar elementos que no deben repetirse en un ciclo.
+                <br></br>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>GLOBALES:</strong>
+                <br>
+                La optimización global se da con respecto a todo el código. Este tipo de optimización es
+                más lenta pero mejora el desempeño general de todo programa. Las optimizaciones globales
+                pueden depender de la arquitectura de la máquina.
+                <br></br>
+                La optimización local se realiza sobre módulos del programa. En la mayoría de las ocasiones a través de
+                funciones, métodos, procedimientos, clases, etc. La característica de las optimizaciones locales es que
+                solo se ven reflejados en dichas secciones.
+                <br></br>
+                En algunos casos es mejor mantener variables globales para agilizar los procesos
+                (el proceso de declarar variables y eliminarlas toma su tiempo) pero consume más
+                memoria. Algunas optimizaciones incluyen utilizar como variables registros del CPU,
+                utilizar instrucciones en ensamblador.
+                <br></br>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>DE MIRILLA:</strong>
+                <br>
+                La optimización de mirilla trata de estructurar de manera eficiente el flujo del programa,
+                sobre todo en instrucciones de bifurcación como son las decisiones, ciclos y saltos de rutinas.
+                <br></br>
+                La idea es tener los saltos lo más cerca de las llamadas, siendo el salto lo más pequeño posible.
+                Instrucciones de bifurcación Interrumpen el flujo normal de un programa, es decir que evitan que se
+                ejecute alguna instrucción del programa y salta a otra parte del programa.
+            </li>
+        </ul>
+        <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/46. TIPOS DE OPTIMIZACIÓN.jpg" alt="46. TIPOS DE OPTIMIZACIÓN (LOCAL).png" width="650"
+                height="350">
+        </div>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.2<br>"COSTOS" </strong></h2>
+        <p>
+            Los costos son el factor más importante a tomar en cuenta a la hora de optimizar ya que en ocasiones la
+            mejora
+            obtenida puede verse no reflejada en el programa final pero si ser perjudicial para el equipo de desarrollo.
+            La optimización de una pequeña mejora tal vez tenga una pequeña ganancia en tiempo o en espacio pero sale
+            muy costosa
+            en tiempo en generarla. Pero en cambio si esa optimización se hace por ejemplo en un ciclo, la mejora
+            obtenida puede
+            ser N veces mayor por lo cual el costo se minimiza y es benéfico la mejora.
+            <br>
+        </p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/47. UNIDAD III. OPTIMIZACIÓN - COSTOS.png" alt="47. UNIDAD III. OPTIMIZACIÓN - COSTOS.png"
+                width="650" height="350">
+        </div>
+    </main>
+    <br>
+    <!--<center>
+        <form action="/submit_comentario" method="post">
+            <label for="comentario">Comentario:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" cols="50">
+  Escribe tu comentario aquí...
+  </textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </center>-->
+    <main class="container">
+        <h2 class="title2">SUB-SUBTEMAS UNIDAD III</h2>
+        <p>
+            <center>
+                <strong><i class='fas fa-exclamation-triangle' style='font-size:60px;color:rgb(202, 5, 5)'></i>
+                    <br></br>️ATENCIÓN:</strong>
+            </center>
+            <br></br>
+            PARA ACCESAR A LOS <strong>SUB-SUBTEMAS</strong> DE LA <strong>UNIDAD III</strong>, HAGA CLICK SOBRE EL
+            BOTÓN.
+            <br></br>
+            <strong>EJEMPLO:</strong>
+            <br></br>
+            <center>
+                <a href="#" class="button_ejemplo" onclick="return false;"><strong>SIGUIENTE </strong><i
+                        class="fas fa-arrow-right"></i>
+                </a>
+            </center>
+            <br></br>
+            EL CUAL APARECE HASTA EL FINAL DE ESTA PESTAÑA.
+        </p>
+    </main>
+
+    <div class="button-container">
+        <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+                class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+            EN HISTORIAL</a>
+        <br>
+        <a href="/HTML/1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i class="fas fa-home"></i>
+            REGRESAR AL MENÚ PRINCIPAL</a>
+        <br>
+        <a href="/HTML/9. UNIDAD 3.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+        <a href="/HTML/11. SUB-SUBTEMAS UNIDAD 3.html" class="button1">SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <br></br>
+
+    <main class="table">
+        <table>
+            <tr>
+                <th>PRESENTADO POR:</th>
+                <td>Sánchez Flores Aleksandra Estefanía</td>
+            </tr>
+        </table>
+        <br></br>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/6. ESTILOS-UNIDAD-II.css">
+    <title>UNIDAD II</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>LENGUAJES & AUTÓMATAS II</h1>
+        </div>
+    </header>
+    <br>
+    <main class="container">
+        <main class="title1">
+            <h1>UNIDAD II.</h1>
+        </main>
+        <h2 class="title2"><strong> "GENERACIÓN DE CÓDIGO INTERMEDIO" </strong></h2>
+        <p>
+            La mayoría de los compiladores generan código como parte del proceso de análisis sintáctico,
+            esto es debido a que requieren del árbol de sintaxis y si este no va a ser construido físicamente,
+            entonces deberá acompañar al analizador sintáctico al barrer el árbol implícito.
+            <br></br>
+            En lugar de generar código ensamblador directamente, los compiladores generan un código intermedio
+            que es más parecido al código ensamblador, las operaciones por ejemplo nunca se hacen con más de
+            dos operandos.
+            <br></br>
+            Al no generarse código ensamblador el cual es dependiente de la computadora especifica, sino código
+            intermedio, se puede reutilizar la parte del compilador que genera código intermedio en otro compilador
+            para una computadora con diferente procesador cambiando solamente el generador de código ensamblador
+            al cual llamamos back-end, la desventaja obviamente es la lentitud que esto conlleva.
+            <br></br>
+            La tarea de síntesis suele comenzar generando un código intermedio.
+            <br>
+            El código intermedio no es el lenguaje de programación de ninguna máquina real, sino que corresponde
+            a una máquina abstracta, que se debe de definir lo más general posible, de forma que sea posible
+            traducir este código intermedio a cualquier máquina real.
+            <br></br>
+            El objetivo del código intermedio es reducir el número de programas necesarios para construir
+            traductores, y permitir más fácilmente la transportabilidad de unas máquinas a otras. Supóngase
+            que se tienen n lenguajes, y se desea construir traductores entre ellos. Sería necesario construir
+            n*(n-1) traductores.
+            <br></br>
+            Sin embargo, si se construye un lenguaje intermedio, tan sólo son necesarios 2*n traductores.
+            <br>
+            Así por ejemplo un fabricante de compiladores puede construir un compilador para diferentes
+            máquinas objeto con tan sólo cambiar las dos últimas fases de la tarea de síntesis.
+            <br>
+        <ul>
+            <li>
+                Se compone de un conjunto de rutinas independientes, llamadas por los analizadores
+                morfológico y sintáctico.
+            </li>
+            <br>
+            <li>
+                El análisis semántico utiliza como entrada el árbol sintáctico detectado por el análisis
+                sintáctico para comprobar restricciones de tipo y otras limitaciones semánticas y preparar
+                la generación de código.
+            </li>
+            <br>
+            <li>
+                En compiladores de un solo paso, las llamadas a las rutinas semánticas se realizan directamente
+                desde el analizador sintáctico y son dichas rutinas las que llaman al generador de código.
+            </li>
+            <br>
+            <li>
+                El instrumento más utilizado para conseguirlo es la gramática de atributos.
+            </li>
+        </ul>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/24. U2 - TRADUCTORES ENTRE LENGUAJES.png"
+                alt="24. U2 - TRADUCTORES ENTRE LENGUAJES.png" width="650" height="350">
+        </div>
+        <br></br>
+        <center>
+            <h2><strong>"TEMARIO UNIDAD II."</strong></h2>
+        </center>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/25. U2 - TEMARIO UNIDAD II.png" alt="25. U2 - TEMARIO UNIDAD II.png" width="650"
+                height="350">
+        </div>
+        </p>
+    </main>
+
+    </main>
+    <<main class="container">
+        <h2 class="title2">SUBTEMAS UNIDAD II</h2>
+        <p>
+            <center>
+                <strong><i class='fas fa-exclamation-triangle' style='font-size:60px;color:rgb(202, 5, 5)'></i>
+                    <br></br>️ATENCIÓN:</strong>
+            </center>
+            <br></br>
+            PARA ACCESAR A LOS <strong>SUBTEMAS</strong> DE LA <strong>UNIDAD II</strong>, HAGA CLICK SOBRE EL
+            BOTÓN.
+            <br>
+            <strong>EJEMPLO:</strong>
+            <br></br>
+            <center>
+                <a href="#" class="button_ejemplo" onclick="return false;"><strong>SIGUIENTE </strong><i
+                        class="fas fa-arrow-right"></i>
+                </a>
+            </center>
+            <br></br>
+            EL CUAL APARECE HASTA EL FINAL DE ESTA PESTAÑA.
+        </p>
+        </main>
+
+        <div class="button-container">
+            <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+                    class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+                EN HISTORIAL</a>
+            <br>
+            <a href="/HTML/1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i
+                    class="fas fa-home"></i>
+                REGRESAR AL MENÚ PRINCIPAL</a>
+            <br>
+            <a href="/HTML/5. SUBTEMAS UNIDAD 1.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+            <a href="/HTML/7. SUBTEMAS UNIDAD 2.html" class="button1"> SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <br></br>
+
+        <main class="table">
+            <table>
+                <tr>
+                    <th>PRESENTADO POR:</th>
+                    <td>Sánchez Flores Aleksandra Estefanía</td>
+                </tr>
+            </table>
+            <br></br>
+        </main>
+</body>
+
+</html>

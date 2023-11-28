@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/11. ESTILOS-SUB_SUBTEMAS-UNIDAD-III.css">
+    <title>SUB-SUBTEMAS UNIDAD III</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>LENGUAJES & AUTÓMATAS II</h1>
+        </div>
+    </header>
+    <br>
+    <main class="container">
+        <main class="title1">
+            <h3>SUB-SUBTEMAS UNIDAD III.</h3>
+        </main>
+        <h2 class="title2"><strong>3.1.1<br>"LOCALES" </strong></h2>
+        <p>
+            La optimización local en el contexto de lenguajes y autómatas se refiere a la
+            mejora de un sistema o algoritmo en una región específica de su espacio de
+            búsqueda.
+            <br>
+            En el campo de lenguajes y autómatas, esto puede aplicarse a diferentes áreas,
+            como la optimización de gramáticas, la minimización de autómatas, la optimización
+            de algoritmos de análisis léxico y sintáctico, entre otros.
+            <br></br>
+        <ol>
+            <li>
+                <strong>Optimización de gramáticas:</strong>
+                <br>
+                Las gramáticas formales, como las gramáticas contextuales o las gramáticas
+                regulares, se utilizan para definir lenguajes formales. La optimización de
+                gramáticas implica encontrar una representación más eficiente o concisa de
+                un lenguaje sin perder ninguna de sus propiedades.
+                <br></br>
+                Esto puede incluir la eliminación de reglas redundantes o la simplificación
+                de la gramática para acelerar el análisis sintáctico.
+            </li>
+            <br></br>
+            <li>
+                <strong>Minimización de autómatas:</strong>
+                <br>
+                En el procesamiento de lenguajes formales, es común utilizar autómatas,
+                como autómatas finitos deterministas (AFD) o autómatas de pila, para reconocer
+                o generar lenguajes. La minimización de autómatas implica encontrar una versión
+                más pequeña del autómata que reconozca el mismo lenguaje. Esto puede mejorar la
+                eficiencia en el procesamiento de cadenas y reducir el consumo de recursos.
+            </li>
+        </ol>
+        <br>
+        <ul>
+            <li>
+                Las optimizaciones locales se realizan sobre el bloque
+                básico
+            </li>
+            <li>
+                Optimizaciones locales:
+                <ul>
+                    <li>
+                        Folding
+                    </li>
+                    <li>
+                        Propagación de constantes
+                    </li>
+                    <li>
+                        Reducción de potencia
+                    </li>
+                    <li>
+                        Reducción de subexpresiones comunes
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+        <br></br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/48. TIPOS DE OPTIMIZACIÓN (LOCAL).png" alt="48. TIPOS DE OPTIMIZACIÓN (LOCAL).png"
+                width="450" height="250">
+        </div>
+        <br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/49. TIPOS DE OPTIMIZACIÓN - LOCALES - FOLDING.png"
+                alt="49. TIPOS DE OPTIMIZACIÓN - LOCALES - FOLDING.png" width="450" height="250">
+        </div>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.1.2<br>"CICLOS" </strong></h2>
+        <p>
+            Los ciclos son una de las partes más esenciales en el rendimiento de un programa dado que realizan acciones
+            repetitivas, y si dichas acciones están mal realizadas,
+            el problema se hace N veces más grandes. La mayoría de las optimizaciones sobre ciclos tratan de encontrar
+            elementos que no deben repetirse en un ciclo.
+            <br></br>
+            El problema de la optimización en ciclos y en general radica en que es muy difícil saber el uso exacto de
+            algunas instrucciones. Así que no todo código de proceso puede ser optimizado. Otros usos de la optimización
+            pueden ser el mejoramiento de consultas en SQL o en aplicaciones remotas (sockets, E/S, etc.)
+            <br></br>
+        <ul>
+            <li>
+                La optimización de bucles es muy importante por las
+                mejoras en tiempo de ejecución que se obtienen.
+            </li>
+            <li>
+                Estrategias de optimización dentro de bucles
+                <ul>
+                    <li>
+                        Expansión de bucles (loop unrolling)
+                    </li>
+                    <li>
+                        Reducción de frecuencia (frequency reduction)
+                    </li>
+                    <li>
+                        Reducción de potencia (strength reduction)
+                    </li>
+                </ul>
+                <br>
+                IMPORTANTE:
+                <br>
+                <strong>La expansión de bucles solo se puede aplicar a los bucles cuyo número de iteraciones se conoce
+                    en tiempo de compilación.</strong>
+            </li>
+        </ul>
+        </p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/50. TIPOS DE OPTIMIZACIÓN (CICLOS).png" alt="50. TIPOS DE OPTIMIZACIÓN (CICLOS).png"
+                width="450" height="250">
+        </div>
+        <br>
+        <center><strong>VARIABLES INDUCTIVAS:</strong></center>
+        <br></br>
+        <strong>NOTAS:</strong>
+        <ul>
+            <li>
+                Una variable "V" es inductiva cuando la única forma en que
+                se modifica su código es V=V+K, donde "K" es una invariante de bucle.
+            </li>
+        </ul>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.1.3<br>"GLOBALES" </strong></h2>
+        <p>
+            La optimización global se da con respecto a todo el código. Este tipo de optimización es más lenta pero
+            mejora el desempeño general de todo programa. Las optimizaciones globales pueden depender de la arquitectura
+            de la máquina.
+            <br></br>
+            En algunos casos es mejor mantener variables globales para agilizar los procesos (el proceso de declarar
+            variables y eliminarlas toma su tiempo) pero consume más memoria. Algunas optimizaciones incluyen utilizar
+            como variables registros del CPU, utilizar instrucciones en ensamblador.
+        </p>
+        <br>
+        <ul>
+            <li>
+                Grafo del flujo de ejecución
+                <ul>
+                    <li>
+                        Antes de realizar una optimización global es necesario crear el grafo de flujo de ejecución.
+                    </li>
+                    <li>
+                        El grafo de flujo de ejecución representa todos los caminos posibles de ejecución del programa.
+                    </li>
+                    <li>
+                        La información contenida en el grafo es útil para
+                        <ul>
+                            <li>
+                                el programador y
+                            </li>
+                            <li>
+                                el optimizador
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                La optimización global a partir del análisis del grafo del flujo de ejecución permite:
+                <ul>
+                    <li>
+                        Una propagación de constantes fuera del bloque básico
+                    </li>
+                    <li>
+                        Eliminación del código no utilizado.
+                    </li>
+                    <li>
+                        Una mejor asignación de los registros.
+                    </li>
+                    <li>
+                        Etc.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>
+                    Problema:
+                </strong>
+                <br>
+                La optimización global es muy costosa en tiempo de
+                compilación.
+            </li>
+        </ul>
+        <br>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/51. GLOBALES LENGUAJES Y AUTÓMATAS 2.png"
+                alt="51. GLOBALES LENGUAJES Y AUTÓMATAS 2.png" width="450" height="250">
+        </div>
+
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/52. TIPOS DE OPTIMIZACIÓN - (GLOBALES).png"
+                alt="52. TIPOS DE OPTIMIZACIÓN - (GLOBALES).png" width="450" height="250">
+        </div>
+        <br>
+        <center><strong>EXPRESIONES DISPONIBLES:</strong></center>
+        <br></br>
+        <strong>NOTAS:</strong>
+        <ul>
+            <li>
+                El problema de las expresiones disponibles consiste en
+                determinar que expresiones están disponibles al inicio de
+                cada bloque básico.
+            </li>
+        </ul>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.1.4<br>"DE MIRILLA" </strong></h2>
+        <p>
+            La optimización de mirilla trata de estructurar de manera eficiente el flujo del programa, sobre todo en
+            instrucciones de bifurcación como son las decisiones, ciclos y saltos de rutinas.
+            <br>
+            La idea es tener los saltos lo más cerca de las llamadas, siendo el salto lo más
+            pequeño posible.
+            <br>
+        </p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/53. TIPOS DE OPTIMIZACIÓN (DE MIRILLA).png"
+                alt="53. TIPOS DE OPTIMIZACIÓN (DE MIRILLA).png" width="450" height="250">
+        </div>
+        <br><br>
+    </main>
+    <br><br>
+
+
+    <main class="container">
+        <h2 class="title2"><strong>3.2.1<br>"COSTO DE EJECUCIÓN (Memoria, registros, pilas)" </strong></h2>
+        <p>
+            Los costos de ejecución son aquellos que vienen implícitos al ejecutar el programa.
+            <br>
+            En algunos programas se tiene un mínimo para ejecutar el programa, por lo que el espacio y la velocidad de
+            los microprocesadores son elementos que se deben optimizar para tener un mercado potencial más amplio.
+            <br></br>
+            Las aplicaciones multimedia como los videojuegos tienen un costo de ejecución alto por lo cual la
+            optimización de su desempeño es crítico, la gran mayoría de las veces requieren de procesadores rápidos
+            (e.g. tarjetas de video) o de mucha memoria. Otro tipo de aplicaciones que deben optimizarse son las
+            aplicaciones para dispositivos móviles.
+            <br></br>
+            Los dispositivos móviles tienen recursos más limitados que un dispositivo de cómputo convencional razón por
+            la cual, el mejor uso de memoria y otros recursos de hardware tiene mayor rendimiento. En algunos casos es
+            preferible tener la lógica del negocio más fuerte en otros dispositivos y hacer uso de arquitecturas
+            descentralizadas como cliente/servidor o P2P.
+        </p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/54. 3.2.1 - UNIDAD III. OPTIMIZACIÓN - COSTOS.png"
+                alt="54. 3.2.1 - UNIDAD III. OPTIMIZACIÓN - COSTOS.png" width="450" height="250">
+        </div>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.2.2<br>"CRITERIOS PARA MEJORAR EL CÓDIGO" </strong></h2>
+        <p>
+            La mejor manera de optimizar el código es hacer ver a los programadores que optimicen su código desde el
+            inicio, el problema radica en que el costo podría ser muy grande ya que tendría que codificar más y/o hacer
+            su código más legible. Los criterios de optimización siempre están definidos por el compilador.
+            <br></br>
+            Muchos de estos criterios pueden modificarse con directivas del compilador desde el código o de manera
+            externa. Este proceso lo realizan algunas herramientas del sistema como los ofuscadores para código móvil y
+            código para dispositivos móviles.
+        </p>
+        <div class="responsive-image">
+            <img src="/RECURSOS/IMG/55. 3.2.2 - UNIDAD III. OPTIMIZACIÓN - CRITERIOS PARA MEJORAR EL CÓDIGO.png"
+                alt="55. 3.2.2 - UNIDAD III. OPTIMIZACIÓN - CRITERIOS PARA MEJORAR EL CÓDIGO.png" width="450"
+                height="250">
+        </div>
+        <br></br>
+    </main>
+
+    <main class="container">
+        <h2 class="title2"><strong>3.2.3<br>"HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS" </strong></h2>
+        <p>
+            Existen algunas herramientas que permiten el análisis de los flujos de datos, entre ellas tenemos los
+            depuradores y desambladores, diagramas de flujo y diccionario de datos.
+            <br></br>
+            La optimización al igual que la programación es un arte y no se ha podido sistematizar del todo.
+        <ul>
+            <li>
+                <strong>Depurador.</strong>
+                <br>
+                Es una aplicación que permite correr otros programas, permitiendo al usuario ejercer cierto control
+                sobre los mismos a medida que los estos se ejecutan, y examinar el estado del sistema (variables,
+                registros, banderas, etc.) en el momento en que se presente algún problema.
+                <br></br>
+                El <strong>depurador</strong> permite detener el programa en:
+                <br></br>
+                <ul>
+                    <li>
+                        Un punto determinado mediante un punto de ruptura.
+                    </li>
+                    <br>
+                    <li>
+                        Un punto determinado bajo ciertas condiciones mediante un punto de ruptura condicional.
+                    </li>
+                    <br>
+                    <li>
+                        Un momento determinado cuando se cumplan ciertas condiciones.
+                    </li>
+                    <br>
+                    <li>
+                        Un momento determinado a petición del usuario.
+                    </li>
+                </ul>
+                <br></br>
+                Durante esa interrupción, el usuario puede:
+                <ul>
+                    <li>
+                        Examinar y modificar la memoria y las variables del programa.
+                    </li>
+                    <br>
+                    <li>
+                        Examinar el contenido de los registros del procesador.
+                    </li>
+                    <br>
+                    <li>
+                        Cambiar el punto de ejecución, de manera que el programa continúe su ejecución en un punto
+                        diferente al punto en el que fue detenido.
+                    </li>
+                    <br>
+                    <li>
+                        Ejecutar instrucción a instrucción.
+                    </li>
+                    <br>
+                    <li>
+                        Ejecutar partes determinadas del código, como el interior de una función, o el resto de código
+                        antes de salir de una función.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <strong>Desamblador o desensamblador.</strong>
+                <br>
+                Es un programa de computadora que traduce el lenguaje de máquina a lenguaje ensamblador, la operación
+                inversa de la que hace el ensamblador.
+                <br></br>
+                Un desensamblador se diferencia de un decompilador, en que está dirigido a un lenguaje de alto nivel en
+                vez de al lenguaje ensamblador.
+                <br></br>
+                <strong>Usos:</strong>
+                <br>
+                Son ampliamente utilizados para crackear programas y para realizar ingeniería inversa. También son
+                utilizados por desarrolladores de software, investigadores o estudiantes.
+            </li>
+            <br>
+            <li>
+                <strong>Diagrama de flujo de datos.</strong>
+                <br>
+                Es una herramienta de modelización que permite describir, de un sistema, la transformación de entradas
+                en salidas. El DFD también es conocido con el nombre de Modelo de Procesos de Negocios.
+                <br></br>
+                <div class="responsive-image">
+                    <img src="/RECURSOS/IMG/56. 3.2.3 - UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        alt="56. 3.2.3 - UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        width="450" height="250">
+                </div>
+                <br></br>
+                <strong>EJEMPLO:</strong>
+                <br></br>
+                <div class="responsive-image">
+                    <img src="/RECURSOS/IMG/57. 3.2.3 EJEMPLO 1 - UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        alt="57. 3.2.3 EJEMPLO 1 - UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        width="450" height="250">
+                </div>
+            </li>
+            <br>
+            <li>
+                <strong>Diccionario de datos.</strong>
+                <br>
+                El diccionario de datos es un listado organizado de todos los elementos de datos que son pertinentes
+                para el sistema, con definiciones precisas y rigurosas que le permite al usuario y al proyectista del
+                sistema tener una misma comprensión de las entradas, de las salidas, y también de cálculos intermedios.
+                <br></br>
+                <strong>EJEMPLO:</strong>
+                <br></br>
+                <div class="responsive-image">
+                    <img src="/RECURSOS/IMG/58. 3.2.3 EJEMPLO 2- UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        alt="58. 3.2.3 EJEMPLO 2- UNIDAD III. OPTIMIZACIÓN - HERRAMIENTAS PARA EL ANÁLISIS DEL FLUJO DE DATOS.png"
+                        width="450" height="250">
+                </div>
+            </li>
+        </ul>
+    </main>
+    <div class="button-container">
+        <a href="javascript: history.go(-1)" class="button2"><i class="fas fa-long-arrow-alt-left"></i><i
+                class="fas fa-history"></i>PESTAÑA ANTERIOR RECIENTE
+            EN HISTORIAL</a>
+        <br>
+        <a href="/HTML/1. MENÚ.html" class="button3"><i class="fas fa-arrow-circle-left"></i> </i><i
+                class="fas fa-home"></i>
+            REGRESAR AL MENÚ PRINCIPAL</a>
+        <br>
+        <a href="/HTML/10. SUBTEMAS UNIDAD 3.html" class="button1"><i class="fas fa-arrow-left"></i> ANTERIOR </a>
+        <a href="/HTML/12. UNIDAD 4.html" class="button1"> SIGUIENTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <br></br>
+    <main class="table">
+        <table>
+            <tr>
+                <th>PRESENTADO POR:</th>
+                <td>Sánchez Flores Aleksandra Estefanía</td>
+            </tr>
+        </table>
+        <br></br>
+    </main>
+</body>
+
+</html>

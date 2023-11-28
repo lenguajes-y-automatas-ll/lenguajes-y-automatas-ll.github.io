@@ -1,0 +1,240 @@
+/*---------------ESTILOS DEL MENÚ PRINCIPAL----------------*/
+
+/* ESTILOS GLOBALES */
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    background-color: #50bdfc;
+    margin: auto;
+}
+
+/*================================================*/
+/* ESTILOS DE CONTENEDORES */
+.container {
+    margin: auto;
+    overflow: hidden;
+    width: 98%;
+}
+
+.flex-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+/*===================================================*/
+/* ESTILOS DE ENCABEZADOS */
+header {
+    background: #058DF6;
+    border-bottom: #070ab6 10px solid;
+    color: #ffffff;
+    min-height: 70px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/*================================================*/
+/* ESTILOS DE LA NAVEGACIÓN */
+nav {
+    background-color: #00ccff;
+    font-size: 12px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1000px;
+}
+
+/*================================================*/
+/* ESTILOS PARA PANTALLAS MAYORES A 768PX */
+@media screen and (min-width : 768px) {
+    .container {
+        width: 98%;
+    }
+}
+
+@media screen and (min-width : 768px) {
+    .title1 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-horizontal {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 600px) {
+        .menu-horizontal li {
+            float: none;
+        }
+    }
+
+    .menu-vertical {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/*================================================*/
+/* ESTILOS DEL MENÚ HORIZONTAL */
+.menu-horizontal {
+    background-color: #058DF6;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-horizontal>li {
+    float: left;
+}
+
+
+.menu-horizontal>li>a {
+    color: #ffffff;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: #024ec0;
+    text-align: center;
+}
+
+/*================================================*/
+/* ESTILOS DEL MENÚ VERTICAL */
+.menu-vertical {
+    background-color: #058DF6;
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    position: absolute;
+    width: 200px;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    text-align: center;
+}
+
+.menu-vertical li:hover {
+    background-color: #00f7ff;
+    text-align: center;
+}
+
+.menu-vertical li a {
+    color: #000000;
+    display: block;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px 15px 15px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*================================================*/
+/* ESTILOS DE LAS IMÁGENES RESPONSIVAS */
+.responsive-image {
+    text-align: center;
+}
+
+.responsive-image img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*================================================*/
+/* ESTILOS DE SECCIÓN (GALERÍA) */
+section {
+    display: flex;
+    width: 890px;
+    height: 280px;
+}
+
+section .responsive-image {
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    width: 0px;
+}
+
+section .responsive-image:hover {
+    cursor: crosshair;
+    filter: contrast(120%);
+    opacity: 1;
+    width: 250px;
+    height: 100px;
+}
+
+/*================================================*/
+/* ESTILOS DE LA TABLA */
+.table {
+    margin: auto;
+    overflow: hidden;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*================================================*/
+/* ESTILOS DE LAS CELDAS DE LA TABLA */
+td,
+th {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-image: initial;
+    font-family: "arial narrow";
+    padding: 20px;
+    text-align: center;
+}
+
+/*================================================*/
+/* ESTILOS DE LOS TÍTULOS */
+
+.title {
+    background-color: #2280B6;
+    text-align: center;
+}
+
+.title1 {
+    background-color: #070ab6;
+    color: #ffffff;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.title2 {
+    background-color: #36789E;
+    text-align: center;
+}
+
+h2.title {
+    background-color: #0598ec;
+    color: #ffffff;
+    min-height: 70px;
+    padding-top: 20px;
+    text-align: center;
+    max-width: 100%;
+}
